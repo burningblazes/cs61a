@@ -1,4 +1,4 @@
-# cs61a
+# CS61A
 My solution to UCB CS61A. 
 
 I do not have a UCB student account, so I add `--local` flag for testing when using `ok`.
