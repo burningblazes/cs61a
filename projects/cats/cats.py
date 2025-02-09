@@ -263,21 +263,26 @@ def minimum_mewtations(typed, source, limit):
     3
     """
 
-    if __________: # Base cases should go here, you may add more base cases as needed.
+    if limit<0:
+        return 0
+    if typed=="" or source=="": # Base cases should go here, you may add more base cases as needed.
         # BEGIN
         "*** YOUR CODE HERE ***"
+        return len(typed)+len(source)
         # END
+
     # Recursive cases should go below here
-    if ___________: # Feel free to remove or add additional cases
+    if typed[0]==source[0]: # Feel free to remove or add additional cases
         # BEGIN
         "*** YOUR CODE HERE ***"
+        return minimum_mewtations(typed[1:],source[1:],limit)
         # END
     else:
-        add = ... # Fill in these lines
-        remove = ...
-        substitute = ...
         # BEGIN
-        "*** YOUR CODE HERE ***"
+        add = minimum_mewtations(typed,source[1:],limit-1)
+        remove = minimum_mewtations(typed[1:],source,limit-1)
+        substitute = minimum_mewtations(typed[1:],source[1:],limit-1)
+        return 1+min(add,remove,substitute)      
         # END
 
 
