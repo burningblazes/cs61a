@@ -16,7 +16,8 @@ Lab03  | 24 Fall
 ### Discussions
 Disc01 | 25 Spring  
 Disc02 | 25 Spring  
-Disc03 | 24 Spring  
+Disc03 | 24 Spring 
+Disc04 | 24 Spring  
 
 ### Homeworks
 HW01   | 25 Spring  
@@ -25,3 +26,4 @@ HW03   | 24 Spring
 
 ### Projects
 Hog    | 25 Spring  
+Cats   | 24 Fall
