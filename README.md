@@ -12,6 +12,7 @@ Lab00  | 24 Fall
 Lab01  | 25 Spring  
 Lab02  | 25 Spring  
 Lab03  | 24 Fall  
+Lab04  | 24 Fall  
 
 ### Discussions
 Disc01 | 25 Spring  
