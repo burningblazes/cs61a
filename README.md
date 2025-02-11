@@ -21,12 +21,15 @@ Disc01 | 25 Spring
 Disc02 | 25 Spring  
 Disc03 | 24 Spring 
 Disc04 | 24 Spring  
-Disc04 | 24 Spring  
+Disc05 | 24 Spring  
+Disc06 | 24 Spring  
 
 ### Homeworks
 HW01   | 25 Spring  
 HW02   | 25 Spring  
 HW03   | 24 Spring  
+HW04   | 24 Spring
+HW05   | 24 Spring
 
 ### Projects
 Hog    | 25 Spring  
