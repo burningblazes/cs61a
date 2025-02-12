@@ -166,6 +166,9 @@ class ThrowerAnt(Ant):
     damage = 1
     # ADD/OVERRIDE CLASS ATTRIBUTES HERE
     food_cost = 3
+    lower_bound=0
+    upper_bound=float("inf")
+
 
     def nearest_bee(self):
         """Return the nearest Bee in a Place (that is not the hive) connected to
@@ -175,9 +178,14 @@ class ThrowerAnt(Ant):
         """
         # BEGIN Problem 3 and 4
         x=self.place
-        while x.is_hive==False:
+        for _ in range(self.lower_bound):
+            if x.entrance:
+                x=x.entrance
+        c=self.lower_bound
+        while x.is_hive==False and c<=self.upper_bound:
             if x.bees==[]:
                 x=x.entrance
+                c+=1
             else:
                 return random_bee(x.bees)           
         return None 
@@ -212,7 +220,8 @@ class ShortThrower(ThrowerAnt):
     food_cost = 2
     # OVERRIDE CLASS ATTRIBUTES HERE
     # BEGIN Problem 4
-    implemented = False   # Change to True to view in the GUI
+    implemented = True   # Change to True to view in the GUI
+    upper_bound=3
     # END Problem 4
 
 
@@ -223,7 +232,8 @@ class LongThrower(ThrowerAnt):
     food_cost = 2
     # OVERRIDE CLASS ATTRIBUTES HERE
     # BEGIN Problem 4
-    implemented = False   # Change to True to view in the GUI
+    implemented = True  # Change to True to view in the GUI
+    lower_bound=5
     # END Problem 4
 
 
@@ -235,7 +245,7 @@ class FireAnt(Ant):
     food_cost = 5
     # OVERRIDE CLASS ATTRIBUTES HERE
     # BEGIN Problem 5
-    implemented = False   # Change to True to view in the GUI
+    implemented = True  # Change to True to view in the GUI
     # END Problem 5
 
     def __init__(self, health=3):
@@ -251,7 +261,19 @@ class FireAnt(Ant):
         """
         # BEGIN Problem 5
         "*** YOUR CODE HERE ***"
+        def do_damage(value,room):
+            for bee in room.bees[:]: 
+                bee.reduce_health(value)
+
+        x=self.place
+        do_damage(amount,x) 
+        super().reduce_health(amount)
+        if self.health <= 0:  
+            do_damage(self.damage,x)
+
         # END Problem 5
+        
+
 
 # BEGIN Problem 6
 # The WallAnt class
