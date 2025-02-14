@@ -486,6 +486,21 @@ class SlowThrower(ThrowerAnt):
     def throw_at(self, target):
         # BEGIN Problem EC 1
         "*** YOUR CODE HERE ***"
+        target.slow_turns = 5
+        
+        if not hasattr(target, 'original_action'):
+            target.original_action = target.action  
+
+            def slow_action(gamestate):
+                if target.slow_turns > 0:
+                    if gamestate.time % 2 == 0:  
+                        target.original_action(gamestate)
+                    target.slow_turns -= 1
+                else:
+                    target.original_action(gamestate) 
+
+            target.action = slow_action  
+        return super().throw_at(target)  
         # END Problem EC 1
 
 
@@ -495,7 +510,7 @@ class ScaryThrower(ThrowerAnt):
     name = 'Scary'
     food_cost = 6
     # BEGIN Problem EC 2
-    implemented = False   # Change to True to view in the GUI
+    implemented = True   # Change to True to view in the GUI
     # END Problem EC 2
 
     def throw_at(self, target):
