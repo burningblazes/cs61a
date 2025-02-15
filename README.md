@@ -1,7 +1,7 @@
 # CS61A
 My solutions to UCB CS61A. 
 
-I do not have a UCB student account, so I add `--local` flag for testing when using `ok`.
+I do not have a UCB student account, so I add `--local` flag when using `ok`.
 
 ## Version infomation
 - The latest version (25 Spring for me): https://cs61a.org 
@@ -34,6 +34,7 @@ HW02   | 25 Spring
 HW03   | 24 Spring  
 HW04   | 24 Spring
 HW05   | 24 Spring
+HW06   | 24 Spring
 
 ### Projects
 Hog    | 25 Spring  
