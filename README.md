@@ -26,6 +26,7 @@ Disc04 | 24 Spring
 Disc05 | 24 Spring  
 Disc06 | 24 Spring  
 Disc07 | 24 Spring  
+Disc08 | 24 Spring  
 
 ### Homeworks
 HW01   | 25 Spring  
