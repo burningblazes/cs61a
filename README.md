@@ -1,5 +1,5 @@
 # CS61A
-My solutions to UCB CS61A. 
+My solutions to UCB CS61A.  Only some of the extra challenges in projects are done.
 
 I do not have a UCB student account, so I add `--local` flag when using `ok`.
 
@@ -8,36 +8,22 @@ I do not have a UCB student account, so I add `--local` flag when using `ok`.
 - 24 Fall: https://web.archive.org/web/20241211055829/https://cs61a.org/
 - 24 Spring: https://www.learncs.site/docs/curriculum-resource/cs61a
 
-### Labs
-Lab00  | 24 Fall  
-Lab01  | 25 Spring  
-Lab02  | 25 Spring  
-Lab03  | 24 Fall  
-Lab04  | 24 Fall  
-Lab05  | 24 Spring  
-Lab06  | 24 Fall 
-Lab07  | 24 Spring
-Lab08  | 24 Spring
-Lab09  | 24 Spring
 
+### Labs, Discussion and Homeworks
 
-### Discussions
-Disc01 | 25 Spring  
-Disc02 | 25 Spring  
-Disc03 | 24 Spring 
-Disc04 | 24 Spring  
-Disc05 | 24 Spring  
-Disc06 | 24 Spring  
-Disc07 | 24 Spring  
-Disc08 | 24 Spring  
+| No.| Discussion | Lab       | Homework  |
+|----|------------|-----------|-----------|
+| 00 |            | 24 Fall   |           |
+| 01 | 25 Spring  | 25 Spring | 25 Spring |
+| 02 | 25 Spring  | 25 Spring | 25 Spring |
+| 03 | 24 Spring  | 24 Fall   | 24 Spring |
+| 04 | 24 Spring  | 24 Fall   | 24 Spring |
+| 05 | 24 Spring  | 24 Spring | 24 Spring |
+| 06 | 24 Spring  | 24 Fall   | 24 Spring |
+| 07 | 24 Spring  | 24 Spring | 24 Spring |
+| 08 | 24 Spring  | 24 Spring |           |
+| 09 |            | 24 Spring |           |
 
-### Homeworks
-HW01   | 25 Spring  
-HW02   | 25 Spring  
-HW03   | 24 Spring  
-HW04   | 24 Spring
-HW05   | 24 Spring
-HW06   | 24 Spring
 
 ### Projects
 Hog    | 25 Spring  
