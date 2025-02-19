@@ -22,10 +22,12 @@ I do not have a UCB student account, so I add `--local` flag when using `ok`.
 | 06 | 24 Spring  | 24 Fall   | 24 Spring |
 | 07 | 24 Spring  | 24 Spring | 24 Spring |
 | 08 | 24 Spring  | 24 Spring |           |
-| 09 |            | 24 Spring |           |
+| 09 | 24 Spring  | 24 Spring |           |
 
 
 ### Projects
-Hog    | 25 Spring  
-Cats   | 24 Fall
-Ants   | 24 Fall
+| Project | Term      |
+|---------|-----------|
+|  Hog    | 25 Spring | 
+|  Cats   | 24 Fall   |
+|  Ants   | 24 Fall   |
