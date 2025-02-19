@@ -1,11 +1,28 @@
-(define (over-or-under num1 num2) 'YOUR-CODE-HERE)
+; Q1
+(define (over-or-under num1 num2) 
+  (cond 
+    ((< num1 num2) -1)
+    ((= num1 num2) 0)
+    (else 1)))
 
-(define (make-adder num) 'YOUR-CODE-HERE)
 
-(define (composed f g) 'YOUR-CODE-HERE)
+; Q2
+(define (make-adder num) 
+  (lambda (x) (+ x num) ))
 
-(define (repeat f n) 'YOUR-CODE-HERE)
 
+; Q3
+(define (composed f g) 
+(lambda (x) (f (g x))))
+
+
+; Q4
+(define (repeat f n) 
+  (if (= n 1)  f (composed f (repeat f (- n 1))))
+  )
+
+
+; Q5
 (define (max a b)
   (if (> a b)
       a
