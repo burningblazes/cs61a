@@ -24,7 +24,8 @@ I do not have a UCB student account, so I add `--local` flag when using `ok`.
 | 08 | 24 Spring  | 24 Spring | 24 Spring |
 | 09 | 24 Spring  | 24 Spring |           |
 | 10 |            |           | 24 Spring |
-
+| 11 |            |           |           |
+| 12 |            | 24 Fall   |           |
 
 
 ### Projects
