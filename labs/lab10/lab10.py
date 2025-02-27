@@ -4,6 +4,8 @@ ob = "CmRlZiBhZGRpdGlvbihleHByKToKICAgIGRpdmlkZW5kID0gZXhwci5maXJzdAogICAgZXhwci
 exec(base64.b64decode(ob.encode("ascii")).decode("ascii"))
 ##############
 
+
+# Q2 and Q4
 def calc_eval(exp):
     """
     >>> calc_eval(Pair("define", Pair("a", Pair(1, nil))))
@@ -26,8 +28,8 @@ def calc_eval(exp):
         return OPERATORS[exp]
     elif isinstance(exp, int) or isinstance(exp, bool):   # Numbers and booleans
         return exp
-    elif _________________: # CHANGE THIS CONDITION FOR Q4 where are variables stored?
-        return _________________ # UPDATE THIS FOR Q4, how do you access a variable?
+    elif exp in bindings: # CHANGE THIS CONDITION FOR Q4 where are variables stored?
+        return bindings[exp] # UPDATE THIS FOR Q4, how do you access a variable?
 
 def calc_apply(op, args):
     return op(args)
@@ -56,9 +58,14 @@ def floor_div(args):
     b=args.rest
     while b != nil:
         temp=b.first
+        if isinstance(temp,Pair):
+            temp=calc_eval(temp)
         a=a//temp
         b=b.rest
     return a
+
+
+#Q3
 
 scheme_t = True   # Scheme's #t
 scheme_f = False  # Scheme's #f
@@ -81,6 +88,17 @@ def eval_and(expressions):
     True
     """
     "*** YOUR CODE HERE ***"
+    res=True
+    cur=expressions
+    while cur is not nil:
+        res=calc_eval(cur.first)
+        if res is scheme_f:
+            return False
+        cur=cur.rest
+    return res
+
+
+#Q4
 
 bindings = {}
 
@@ -100,6 +118,12 @@ def eval_define(expressions):
     2
     """
     "*** YOUR CODE HERE ***"
+    sym=expressions.first
+    val=expressions.rest
+    bindings[sym]=calc_eval(val.first)
+    return sym
+
+
 
 OPERATORS = { "//": floor_div, "+": addition, "-": subtraction, "*": multiplication, "/": division }
 
