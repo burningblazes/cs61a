@@ -65,10 +65,14 @@ def scheme_apply(procedure, args, env):
     elif isinstance(procedure, LambdaProcedure):
         # BEGIN PROBLEM 9
         "*** YOUR CODE HERE ***"
+        child_frame=procedure.env.make_child_frame(procedure.formals,args)
+        return eval_all(procedure.body,child_frame)
         # END PROBLEM 9
     elif isinstance(procedure, MuProcedure):
         # BEGIN PROBLEM 11
         "*** YOUR CODE HERE ***"
+        child_frame=env.make_child_frame(procedure.formals,args)
+        return eval_all(procedure.body,child_frame)
         # END PROBLEM 11
     else:
         assert False, "Unexpected procedure: {}".format(procedure)
@@ -89,7 +93,13 @@ def eval_all(expressions, env):
     2
     """
     # BEGIN PROBLEM 6
-    return scheme_eval(expressions.first, env) # replace this with lines of your own code
+    if expressions==nil:
+        return None
+    x=expressions
+    while x.rest is not nil:
+        scheme_eval(x.first,env)
+        x=x.rest
+    return scheme_eval(x.first,env)
     # END PROBLEM 6
 
 
