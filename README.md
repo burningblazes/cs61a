@@ -34,4 +34,4 @@ I do not have a UCB student account, so I add `--local` flag when using `ok`.
 |  Hog    | 25 Spring | 
 |  Cats   | 24 Fall   |
 |  Ants   | 24 Fall   |
-| Scheme  |           |
+| Scheme  | 24 Fall   |
