@@ -1,7 +1,7 @@
 # CS61A
 My solutions to UCB CS61A. All the mandatory questions as well as some of the optional questions are done. 
 
-Progress: 97$\%$. Probably I will let it stay at 97$\% :)))$. 
+Progress: 97%. Probably I will let it stay at 97:))). 
 
 I do not have a UCB student account, so I add `--local` flag when using `ok`.
 
